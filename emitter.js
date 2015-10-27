@@ -17,8 +17,8 @@ emitter.on('ganesh',function(){
 });
 
 emitter.on('brindaban',function(){
-	console.log('keep your hens safely brindaban is comming.... hurry up.')
-})
+	console.log('hey!!! protect your hens brindaban is comming.... hurry up.')
+});
 
 emitter.emit('sooraj');
 emitter.emit('jitendar');
