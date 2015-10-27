@@ -2,7 +2,7 @@ var EventEmitter = require('events').EventEmitter;
 
 var emitter = new EventEmitter();
 
-emitter.on('sooraj',function(){
+emitter.once('sooraj',function(){
 	console.log('sooraj is budduse');
 });
 
@@ -19,6 +19,7 @@ emitter.on('brindaban',function(){
 })
 
 emitter.emit('sooraj');
+emitter.emit('jitendar');
 emitter.emit('jitendar');
 emitter.emit('brindaban');
 emitter.emit('sooraj');
