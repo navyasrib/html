@@ -6,9 +6,11 @@ emitter.once('sooraj',function(){
 	console.log('sooraj is budduse');
 });
 
-emitter.on('jitendar',function(){
+var x = function(){
 	console.log('jitendar is a stupid');
-});
+	emitter.removeListener('jitendar',x);
+}
+emitter.on('jitendar',x);
 
 emitter.on('ganesh',function(){
 	console.log('ganesh is a mad boy')
@@ -19,6 +21,8 @@ emitter.on('brindaban',function(){
 })
 
 emitter.emit('sooraj');
+emitter.emit('jitendar');
+emitter.emit('jitendar');
 emitter.emit('jitendar');
 emitter.emit('jitendar');
 emitter.emit('brindaban');
