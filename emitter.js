@@ -16,8 +16,8 @@ emitter.on('ganesh',function(){
 	console.log('ganesh is a mad boy')
 });
 
-emitter.on('brindaban',function(){
-	console.log('hey!!! protect your hens brindaban is comming.... hurry up.')
+emitter.on('brindaban',function(a,b,c){
+	console.log('hey!!! protect your',a,b,c,'hens brindaban is comming.... hurry up.')
 });
 
 var ola = function(){
@@ -26,12 +26,18 @@ var ola = function(){
 emitter.on('ola',ola);
 emitter.removeListener('ola',ola);
 
+var addition = function(num1,num2){
+	console.log('sum of',num1,num2,'is',num1+num2);
+};
+emitter.on('sum',addition);
+
+emitter.emit('sum',5,3);
 emitter.emit('sooraj');
 emitter.emit('jitendar');
 emitter.emit('jitendar');
 emitter.emit('jitendar');
 emitter.emit('jitendar');
-emitter.emit('brindaban');
+emitter.emit('brindaban',2,3,4);
 emitter.emit('sooraj');
 emitter.emit('ganesh');
 emitter.emit('sooraj');
