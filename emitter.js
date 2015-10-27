@@ -9,7 +9,7 @@ emitter.once('sooraj',function(){
 var x = function(){
 	console.log('jitendar is a stupid');
 	emitter.removeListener('jitendar',x);
-}
+};
 emitter.on('jitendar',x);
 
 emitter.on('ganesh',function(){
@@ -20,6 +20,12 @@ emitter.on('brindaban',function(){
 	console.log('hey!!! protect your hens brindaban is comming.... hurry up.')
 });
 
+var ola = function(){
+	console.log('this is removed listener');
+};
+emitter.on('ola',ola);
+emitter.removeListener('ola',ola);
+
 emitter.emit('sooraj');
 emitter.emit('jitendar');
 emitter.emit('jitendar');
@@ -29,3 +35,4 @@ emitter.emit('brindaban');
 emitter.emit('sooraj');
 emitter.emit('ganesh');
 emitter.emit('sooraj');
+emitter.emit('ola');
